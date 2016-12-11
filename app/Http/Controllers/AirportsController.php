@@ -26,6 +26,7 @@ class AirportsController extends Controller
     public function create()
     {
         $airports =Airports::all();
+
         return view('airports.create', compact('airports'));
     }
 
