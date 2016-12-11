@@ -1,0 +1,58 @@
+.container{
+  font-family: 'Lato';
+
+}
+
+
+.headerColumn{
+    width: 100%;
+    height: auto;
+    background: rgba(205, 96, 13, 0.23);
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 6px;
+
+}
+
+.leftColumn{
+    height: auto;
+    width: 200px;
+    background: #bcb0b0;
+    margin-top: 150px;
+    float: left;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.rightColumn{
+    height: auto;
+    width: 100%;
+    background: #b9bcb7;
+    margin-top: 1px;
+    float: right;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 6px;
+}
+
+#title {
+
+    font-size: 20px;
+    text-align: center;
+    border-radius: 6px;
+
+
+}
+
+.menu{
+
+
+float: left;
+
+}
+
+.menufront{
+    float: right;
+
+
+}
