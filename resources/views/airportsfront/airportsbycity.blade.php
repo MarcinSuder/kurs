@@ -8,13 +8,13 @@
 
     <div class="leftColumn">
 
+        <div class="back">
 
-        <div class="select">
-
-            <a style="color: rgb(111, 111, 111)" href="/airportsfront">Powrót</a>
+            <a style="color: rgb(111, 111, 111)" href="/airportsfront"><- sortowanie</a>
         </div>
 
     </div>
+
 
     <div class="rightColumn"><br>
 

@@ -4,7 +4,8 @@
 
     <div class="leftColumn-index">
 
-        <div class="select">sortowanie</div>
+        <div class="back">sortowanie</div>
+
         <div class="foreach">
         @foreach($continents as $continent)
 
@@ -12,10 +13,8 @@
 
         @endforeach
         </div>
-
-
-
     </div>
+
 
 
     <div class="rightColumn">

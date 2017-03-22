@@ -9,14 +9,17 @@
     <div class="leftColumn">
 
 
-        <div class="select">sortowanie</div>
+        <div class="back">
+            <a style="color: rgb(111, 111, 111)" href="/airportsfront"><- sortowanie</a>
+        </div>
         <div class="foreach">
         @foreach($cities as $city)
 
             <a class="ahref" href="/airportsbycity/{{$city->id}}">{{$city->cities}}</a><br>
 
         @endforeach
-        </div><br>
+            </div>
+
 
 
     </div>

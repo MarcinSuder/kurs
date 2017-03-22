@@ -13,7 +13,6 @@
     margin-bottom: 5%;
     text-decoration: none;
     font-size: 17px;
-
 }
 .table tbody tr:hover td, .table tbody tr:hover tr {
     background-color: rgba(30, 13, 41, 0.43);
@@ -58,20 +57,32 @@
     background-color: #eeeeee;
     padding-bottom: 50%;
 }
-
 #title {
     font-size: 20px;
     text-align: center;
 }
+.foreach {
+    margin-top: 25%;
+}
 .menufront {
     float: right;
 }
-.select {
+/*.select {*/
+    /*color:rgb(111, 111, 111) ;*/
+    /*font-weight: 700;*/
+    /*letter-spacing: 1px;*/
+    /*font-size: 25px;*/
+    /*text-align: center;*/
+/*}*/
+.back {
     color:rgb(111, 111, 111) ;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 25px;
     text-align: center;
+    position: fixed;
+    margin-left: 2%;
+    background-color: white;
 }
 .list {
     font-size:15px;
@@ -94,13 +105,13 @@
 .description {
     margin-top: 8%;
     margin-bottom: 8%;
+    font-size: 17px;
 }
 .ahref {
     color: #5d5d5d;
     font-size: 17px;
     letter-spacing: 1px;
     padding-left: 15%;
-    padding-bottom: 20%;
 }
 .comments {
     margin-top:70px;
@@ -154,7 +165,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 17px;
-    margin: 4px 2px;
     cursor: pointer;
     float: left;
     border-radius: 3px;

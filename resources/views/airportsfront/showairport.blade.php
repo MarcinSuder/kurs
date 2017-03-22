@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="leftColumn">
-            <div class="select">
-                <a style="color: rgb(111, 111, 111)" href="/airportsfront">Powrót</a>
+            <div class="back">
+                <a style="color: rgb(111, 111, 111)" href="/airportsfront"><- sortowanie</a>
             </div>
     </div>
 
@@ -15,7 +15,7 @@
         <div class="index"> {{$airports[0]->airports}}</div>
 
 
-
+            <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsfront">Świat</a></div>
             <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsbycontinent/{{$continent[0]->id}}">{{$continent[0]->kontynent}}</a></div>
             <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsbycountry/{{$country[0]->id}}">{{$country[0]->countrys}}</a></div>
             <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsbycity/{{$city[0]->id}}">{{$city[0]->cities}}</a></div>

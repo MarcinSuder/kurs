@@ -28,12 +28,7 @@
         <div style="text-align:center;text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);color:white;font-size: 17px;font-family: 'Dosis', sans-serif;">Przegląd lotnisk z całego świata!    Opisy-Opinie-Ciekawostki!</div>
 
 
-
     </div>
-
-
-
-
 
 
 </body>
