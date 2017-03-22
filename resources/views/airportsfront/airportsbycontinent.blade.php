@@ -10,7 +10,7 @@
 
 
         <div class="back">
-            <a style="color: rgb(111, 111, 111)" href="/airportsfront"><- sortowanie</a>
+            <a style="color: rgb(111, 111, 111)" href="/airportsfront">sortowanie</a>
         </div>
 
         <div class="foreach">
@@ -42,7 +42,7 @@
 
                 @foreach($airports as $airport)
                     <div style="border-bottom: 1px solid #b8b8b8">
-                    <a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/airplane.png" width="50" height="35"></a>
+                    <a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a>
 
                     <a class="ahref" href="/showairport/{{ $airport['id'] }}">{{$airport->airports}}</a><br>
                     </div>
@@ -104,7 +104,7 @@
 
                     <table class="table-bordered">
                         <tr>
-                            <td><a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/airplane.png" width="50" height="35"></a></td>
+                            <td><a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="35" height="50"></a></td>
 
                             <td><a class="ahref" href="/showairport/{{ $airport['id'] }}">{{ $airport->airports }} ({{$airport->kraj->countrys}})</a><br></td>
                         </tr>

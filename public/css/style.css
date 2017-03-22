@@ -71,11 +71,11 @@
     color:rgb(111, 111, 111) ;
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: 25px;
+    font-size: 17px;
     text-align: center;
     position: fixed;
-    margin-left: 2%;
     background-color: white;
+    margin-left: 2%;
 }
 .list {
     font-size:15px;
