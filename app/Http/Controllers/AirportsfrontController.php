@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comments;
+use App\Continent;
 use App\Http\Requests\CommentsRequest;
 use Illuminate\Http\Request;
 use App\Airports;

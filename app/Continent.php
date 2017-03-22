@@ -6,7 +6,7 @@
  * Time: 4:54 PM
  */
 
-namespace App\Http\Controllers;
+namespace App;
 
 
 use App\Airports;

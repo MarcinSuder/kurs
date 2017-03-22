@@ -15,18 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('pages', 'PagesController');
-Route::resource('categories', 'CategoriesController');
-Route::resource('sites', 'SitesController');
-Route::resource('cars', 'carsController');
-Route::resource('panstwa', 'PanstwaController');
-Route::resource('countrys', 'CountrysController');
-Route::resource('cities', 'CitiesController');
 
 
-
-
-// routes do strony Airports
+// routes do strony Airports24
 Route::resource('airports', 'AirportsController');
 Route::get('airportsfront', 'AirportsfrontController@index');
 Route::get('citiesfront', 'AirportsfrontController@cities');
@@ -66,7 +57,6 @@ Route::get('/start', [
     'uses'      => 'AirportsfrontController@start',
     'as'        => 'start',
 ]);
-
 
 
 
