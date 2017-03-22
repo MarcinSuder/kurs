@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 
-
-// routes do strony Airports24
+Route::resource('countrys', 'CountrysController');
+Route::resource('cities', 'CitiesController');
 Route::resource('airports', 'AirportsController');
 Route::get('airportsfront', 'AirportsfrontController@index');
 Route::get('citiesfront', 'AirportsfrontController@cities');
@@ -57,6 +57,7 @@ Route::get('/start', [
     'uses'      => 'AirportsfrontController@start',
     'as'        => 'start',
 ]);
+
 
 
 
