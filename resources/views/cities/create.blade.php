@@ -10,10 +10,27 @@
         </div>
 
         <div class="form-group">
-            <select name="id_countrys" class="form-control">
+            Miasta juz dodane<br>
+            <select name="" class="form-control">
                 @foreach($cities as $city)
 
                     <option value="{{ $city->id  }}">{{ $city->cities }}</option>
+
+                @endforeach
+            </select>
+                Wybierz kraj<br>
+            <select name="id_countrys" class="form-control">
+                @foreach($countries as $country)
+
+                    <option value="{{ $country->id  }}">{{ $country->countrys }}</option>
+
+                @endforeach
+            </select>
+            Wybierz kontynent<br>
+            <select name="id_continents" class="form-control">
+                @foreach($continents as $continent)
+
+                    <option value="{{ $continent->id  }}">{{ $continent->kontynent }}</option>
 
                 @endforeach
             </select>
@@ -22,5 +39,11 @@
 
         <button type="submit" class="btn btn-primary active">>> ADD <<</button>
     </form>
+
+    <div style="margin-top: 20px" class="btn btn-danger">
+
+        <a style="color: white" href="/airports">Panel / Powrót</a>
+
+    </div>
 
 @endsection

@@ -16,8 +16,11 @@ class Airports extends Migration
         Schema::create('airports', function (Blueprint $table) {
             $table->increments('id');
             $table->string('airports');
+            $table->string('description');
+            $table->string('foto');
             $table->integer('id_cities')->unsigned();
             $table->integer('id_countrys')->unsigned();
+            $table->integer('id_continents')->unsigned();
             $table->timestamps();
         });
         Schema::table('airports', function (Blueprint $table) {
@@ -28,7 +31,11 @@ class Airports extends Migration
 
             $table->foreign('id_countrys')
             ->references('id')
-            ->on('cities');
+            ->on('countrys');
+
+            $table->foreign('id_continents')
+                ->references('id')
+                ->on('continents');
     });
     }
 

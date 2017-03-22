@@ -12,7 +12,7 @@ class AirportsTableSeeder extends Seeder
         for ($i = 0; $i < 50; $i++) {
             $airport = new Airports();
             $airport->airports = $faker->city;
-            $airport->id_cities = 1;
+            $airport->id_cities = 2;
             $airport->id_countrys = 1;
             $airport->save();
         }

@@ -22,10 +22,55 @@ Route::resource('cars', 'carsController');
 Route::resource('panstwa', 'PanstwaController');
 Route::resource('countrys', 'CountrysController');
 Route::resource('cities', 'CitiesController');
+
+
+
+
+// routes do strony Airports
 Route::resource('airports', 'AirportsController');
-Route::resource('airportsfront', 'AirportsfrontController');
-Route::get('/contact', 'AirportsfrontController@contact');
-Route::get('/offer', 'AirportsfrontController@offer');
+Route::get('airportsfront', 'AirportsfrontController@index');
+Route::get('citiesfront', 'AirportsfrontController@cities');
+Route::get('countrysfront', 'AirportsfrontController@country');
+Route::get('contact', 'AirportsfrontController@contact');
+Route::get('offer', 'AirportsfrontController@offer');
+Route::get('/showairports/{id}', 'AirportsfrontController@showairports');
+Route::get('/showcities/{id}', 'AirportsfrontController@showcities');
+Route::get('/showcountry/{id}', 'AirportsfrontController@showcountries');
+Route::get('/showairports/{id}', 'AirportsfrontController@airports');
+Route::get('/showairport/{id}', 'AirportsfrontController@airport');
+Route::get('/logout', 'AirportsController@getLogout');
+Route::get('/continentsfront', 'AirportsfrontController@showcontinents');
+Route::get('/showcontinent/{id}', 'AirportsfrontController@continent');
+
+Route::post('/showairport/{id}', [
+    'uses'      => 'AirportsfrontController@store',
+    'as'        => 'showairport',
+]);
+
+Route::get('/airportsbycontinent/{id}', [
+    'uses'      => 'AirportsfrontController@airportsbycontinent',
+    'as'        => 'airportsbycontinent',
+]);
+
+Route::get('/airportsbycountry/{id}', [
+    'uses'      => 'AirportsfrontController@airportsbycountry',
+    'as'        => 'airportsbycountry',
+]);
+
+Route::get('/airportsbycity/{id}', [
+    'uses'      => 'AirportsfrontController@airportsbycity',
+    'as'        => 'airportsbycity',
+]);
+
+Route::get('/start', [
+    'uses'      => 'AirportsfrontController@start',
+    'as'        => 'start',
+]);
+
+
+
+
+
 
 
 Auth::routes();

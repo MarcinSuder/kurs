@@ -26,8 +26,9 @@ class CountrysController extends Controller
      */
     public function create()
     {
-        $countrys =Countrys::all();
-        return view('countrys.create', compact('countrys'));
+        $continents = Continent::orderBy('kontynent')->get();
+        $countrys =Countrys::orderBy('countrys')->get();
+        return view('countrys.create', compact('countrys','continents'));
     }
 
     /**
@@ -40,6 +41,7 @@ class CountrysController extends Controller
     {
         $country = new Countrys();
         $country->countrys = $request->input('countrys');
+        $country->id_continents = $request->input('id_continents');
         $country->save();
 
         return redirect('/countrys');

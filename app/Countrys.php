@@ -3,12 +3,16 @@
 
 namespace App;
 
+use App\Airports;
 use Illuminate\Database\Eloquent\Model;
+
 
 
 class Countrys extends Model
 {
-    public function countrys(){
-        return $this->belongsTo(Countrys::class);
+
+    public function airports()
+    {
+        return $this->hasMany(Airports::class, 'id', 'id_countrys');
     }
 }

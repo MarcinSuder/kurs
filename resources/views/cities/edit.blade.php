@@ -7,7 +7,7 @@
         {{ csrf_field() }}
         <div class="form-group">
             <label for="cities">Country</label>
-            <input name="cities" value="{{$city->countrys}}" type="text" class="form-control" id="country">
+            <input name="cities" value="{{$city->cities}}" type="text" class="form-control" id="country">
         </div>
         <div class="form-group">
 

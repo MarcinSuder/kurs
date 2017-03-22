@@ -1,58 +1,300 @@
-.container{
-  font-family: 'Lato';
+.start{
+    background-image: url("airportone.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    font-family:'Courier New';
+}
+.comments{
+    margin-top: 50px;
+}
+.menu-airport {
+    background-color: white;
+    margin-bottom: 5%;
+    text-decoration: none;
+    font-size: 17px;
 
 }
-
-
+.table tbody tr:hover td, .table tbody tr:hover tr {
+    background-color: rgba(30, 13, 41, 0.43);
+}
+.adminmenu {
+    float: left;
+}
+.admintable {
+    padding-top: 15%;
+}
 .headerColumn{
     width: 100%;
-    height: auto;
-    background: rgba(205, 96, 13, 0.23);
-    border: 2px solid black;
-    text-align: center;
-    border-radius: 6px;
-
+    margin-bottom: 100px;
+    position: fixed;
+    height: 80px;
+    background-color: white;
+    z-index: 100;
+    border-bottom: 1px solid #848484;
 }
-
-.leftColumn{
-    height: auto;
-    width: 200px;
-    background: #bcb0b0;
-    margin-top: 150px;
+.leftColumn {
+    width: 15%;
     float: left;
-    border: 2px solid black;
-    border-radius: 6px;
+    margin-top: 80px;
+    font-family: 'Dosis', sans-serif;
 }
+.leftColumn-index {
+    width: 15%;
+    float: left;
+    margin-top: 80px;
+    font-family: 'Dosis', sans-serif;
+    position: fixed;
+}
+.rightColumn {
 
-.rightColumn{
-    height: auto;
-    width: 100%;
-    background: #b9bcb7;
-    margin-top: 1px;
+    width: 85%;
     float: right;
-    border: 2px solid black;
-    text-align: center;
-    border-radius: 6px;
+    margin-top: 80px;
+    color: black;
+    border-left: solid 1px rgba(0, 0, 0, 0.38);
+    font-family: 'Dosis', sans-serif;
+    padding-left: 40px;
+    background-color: #eeeeee;
+    padding-bottom: 50%;
 }
 
 #title {
-
     font-size: 20px;
     text-align: center;
-    border-radius: 6px;
-
-
 }
-
-.menu{
-
-
-float: left;
-
-}
-
-.menufront{
+.menufront {
     float: right;
-
+}
+.select {
+    color:rgb(111, 111, 111) ;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 25px;
+    text-align: center;
+}
+.list {
+    font-size:15px;
+    padding:8px;
+}
+.index {
+    padding-top:50px;
+    padding-bottom: 30px;
+    color: rgb(111, 111, 111);
+    font-weight:700;
+    letter-spacing:1px;
+    font-size:30px;
+    text-align: center;
+}
+.airports {
+    float: left;
+    font-size: 15px;
+    padding-left: 20px;
+}
+.description {
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+.ahref {
+    color: #5d5d5d;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding-left: 15%;
+    padding-bottom: 20%;
+}
+.comments {
+    margin-top:70px;
+    color:rgba(22, 22, 22, 0.67);
+    font-size: 17px;
+    text-align: center;
+}
+.img {
+    width: 50%;
+    height: 50%;
+    box-shadow: 10px 10px 7px #a9a9a9;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button {
+    background-color: rgb(144, 144, 144);
+    border: none;
+    color: white;
+    padding: 4px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+    border-radius: 3px;
+    font-family: 'Dosis', sans-serif;
+}
+.button-airport {
+    background-color: #eeeeee;
+    border: 1px solid #a3a3a3;
+    padding: 4px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: left;
+    border-radius: 3px;
+    font-family: 'Dosis', sans-serif;
 
 }
+.website {
+    background-color: #eeeeee;
+    border: 1px solid #a3a3a3;
+    padding: 4px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: left;
+    border-radius: 3px;
+    font-family: 'Dosis', sans-serif;
+}
+.button:hover{
+    text-decoration: none;
+    color: white;
+}
+.responsive {
+    display: none;
+}
+.index-mobile {
+    display: none;
+}
+.section-mobile {
+    display: none;
+}
+.logo-mobile {
+    display: none;
+}
+.contact {
+    padding-top: 25%;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    font-size: 150%;
+}
+#worldairports-mobile {
+    display: none;
+}
+
+
+            @media (max-width: 700px) {
+                body {
+                    font-family: 'Dosis', sans-serif;
+                }
+                .headerColumn{
+                    display: none;
+                }
+                .flightradar {
+                    display: none;
+                }
+                .leftColumn {
+                    display: none;
+                }
+                .leftColumn-index {
+                    display: none;
+                }
+                .rightColumn {
+                    display: none;
+                }
+                .section-mobile {
+                    display: block;
+                    background-color: #c5c5c5;
+                }
+                .index-mobile {
+                    display: block;
+                }
+                .indexcity-mobile {
+                    display: block;
+                    padding-top: 35%;
+                }
+                select {
+                    width: 100%;
+                }
+                .select-mobile {
+                    font-size: 300%;
+                    padding-top: 35%;
+                    width: 100%;
+                }
+                .start{
+                    background-image: url("airportone.jpg");
+                    font-size: 150%;
+                    width: 100%;
+                    height: 100%;
+                    font-family:'Courier New';
+                }
+                .list {
+                    font-size:150%;
+                    padding-bottom: 1px;
+
+                }
+                .index {
+                    padding-top:50px;
+                    color:rgba(22, 22, 22, 0.67);
+                    font-weight:700;
+                    letter-spacing:1px;
+                    font-size:200%;
+                }
+                .ahref {
+                    color:black;
+                    font-size: 300%;
+                    letter-spacing: 1px;
+                }
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 10px 10px 7px #979797;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .button-airport {
+                    font-size: 150%;
+                }
+
+                .description {
+                    font-size: 180%;
+                }
+                .button {
+                    background-color: #4650ff;
+                    border: none;
+                    color: white;
+                    padding: 10px 25px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 200%;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    float: left;
+                }
+                #menu-mobile {
+                    position: fixed;
+                    background-color: white;
+                    width: 100%;
+                    margin-top: 15%;
+                }
+                #worldairports-mobile {
+                    display: block;
+                    font-size: 300%;
+                    position: fixed;
+                    background-color: white;
+                    width: 100%;
+                    height: 15%;
+                    float:left;
+                    font-family:'Courier New';
+                    font-weight:600;
+                }
+
+
+            }
+

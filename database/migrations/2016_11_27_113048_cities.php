@@ -6,6 +6,10 @@ use Illuminate\Database\Migrations\Migration;
 
 class Cities extends Migration
 {
+    public static function orderBy($string)
+    {
+    }
+
     /**
      * Run the migrations.
      *
@@ -17,12 +21,18 @@ class Cities extends Migration
             $table->increments('id');
             $table->string('cities');
             $table->integer('id_countrys')->unsigned();
+            $table->integer('id_continents')->unsigned();
             $table->timestamps();
         });
         Schema::table('cities', function (Blueprint $table) {
             $table->foreign('id_countrys')
                 ->references('id')
                 ->on('countrys');
+        });
+        Schema::table('cities', function (Blueprint $table) {
+            $table->foreign('id_continents')
+                ->references('id')
+                ->on('continents');
         });
     }
 

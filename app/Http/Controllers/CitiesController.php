@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Countrys;
 use Illuminate\Http\Request;
 use App\Cities;
+use App\Http\Controllers\Continent;
 
 class CitiesController extends Controller
 {
@@ -23,8 +25,10 @@ class CitiesController extends Controller
      */
     public function create()
     {
+        $continents = Continent::orderBy('kontynent')->get();
+        $countries = Countrys::orderBy('countrys')->get();
         $cities =Cities::all();
-        return view('cities.create', compact('cities'));
+        return view('cities.create', compact('cities','countries','continents'));
     }
 
     /**
@@ -38,6 +42,7 @@ class CitiesController extends Controller
         $city = new Cities();
         $city->cities = $request->input('cities');
         $city->id_countrys = $request->input('id_countrys');
+        $city->id_continents = $request->input('id_continents');
         $city->save();
 
         return redirect('/cities');

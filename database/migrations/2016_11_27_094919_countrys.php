@@ -12,7 +12,14 @@ class Countrys extends Migration
         Schema::create('countrys', function (Blueprint $table) {
             $table->increments('id');
             $table->string('countrys');
+            $table->integer('id_continents')->unsigned();
             $table->timestamps();
+        });
+
+        Schema::table('countrys', function (Blueprint $table) {
+            $table->foreign('id_continents')
+                ->references('id')
+                ->on('continents');
         });
     }
 

@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Countrys;
+use Auth;
+use App\Cities;
 use Illuminate\Http\Request;
 use App\Airports;
 
+
 class AirportsController extends Controller
 {
+
+
+    public function __construct(){
+    $this->middleware('auth');
+}
     /**
      * Display a listing of the resource.
      *
@@ -18,6 +27,8 @@ class AirportsController extends Controller
         return view('airports.index', compact('airports'));
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,9 +36,11 @@ class AirportsController extends Controller
      */
     public function create()
     {
+        $continents = Continent::orderBy('kontynent')->get();
+        $countries = Countrys::orderBy('countrys')->get();
+        $cities = Cities::orderBy('cities')->get();
         $airports =Airports::all();
-
-        return view('airports.create', compact('airports'));
+        return view('airports.create', compact('airports','continents','countries','cities'));
     }
 
     /**
@@ -40,8 +53,12 @@ class AirportsController extends Controller
     {
         $airports = new Airports();
         $airports->airports = $request->input('airports');
+        $airports->description = $request->input('description');
+        $airports->website = $request->input('website');
+        $airports->foto = $request->input('photo');
         $airports->id_cities = $request->input('id_cities');
-        $airports->id_countrys = $request->input('id_countrys');
+        $airports->id_countrys = $request->input('id_countries');
+        $airports->id_continents = $request->input('id_continents');
         $airports->save();
 
         return redirect('/airports');
@@ -82,6 +99,9 @@ class AirportsController extends Controller
     {
         $airports = Airports::find($id);
         $airports->airports = $request->input('airport');
+        $airports->description = $request->input('description');
+        $airports->website = $request->input('website');
+        $airports->foto = $request->input('foto');
         $airports->save();
 
         return redirect('/airports');
@@ -101,4 +121,15 @@ class AirportsController extends Controller
 
         return redirect('/airports');
     }
+
+    public function getLogout() {
+
+
+        Auth::logout();
+
+        return redirect('/airportsfront');
+
+    }
+
+
 }

@@ -4,18 +4,20 @@
 
 
 
-    <div class="container">
+
         <div class="headerColumn" >
             <div><h2><i>Panel admin.<br></div>
-            <div class="menu"><a href="{{route('countrys.index')}}" class="btn btn-danger">Kraj</a></div>
-            <div class="menu"><a href="{{route('cities.index')}}" class="btn btn-primary">Miasto</a></div>
-            <div class="menu"><a href="{{route('airports.index')}}" class="btn btn-success">Lotnisko</a></div>
-            <div class="menu"><a href="" class="btn btn-warning">Wyloguj się</a></div>
+            <div class="adminmenu"><a href="{{route('countrys.index')}}" class="btn btn-danger">Kraj</a></div>
+            <div class="adminmenu"><a href="{{route('cities.index')}}" class="btn btn-primary">Miasto</a></div>
+            <div class="adminmenu"><a href="{{route('airports.index')}}" class="btn btn-success">Lotnisko</a></div>
+            <div class="adminmenu"><a href="" class="btn btn-warning">Wyloguj się</a></div>
+            <div class="adminmenu"><a href="/airportsfront" class="btn btn-info">HomeWeb</a></div><br><br>
+            <a class="btn btn-danger" href="{{route('countrys.create')}}">Dodaj Kraj</a>
         </div>
 
-    </div> <br><br>
-     <a class="btn btn-danger" href="{{route('countrys.create')}}">Dodaj Kraj</a>
-    <table class="table table-hover">
+
+    <div class="admintable">
+    <table class="table table-hover" class="admintable">
         <tr>
             <th>ID</th>
             <th>Country</th>
@@ -39,7 +41,8 @@
                     </form></td>
             </tr>
         @endforeach
-    </table> <br>
+    </table>
+    </div>
 
 
     {{ $countrys->links() }}
