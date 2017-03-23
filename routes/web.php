@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::resource('countrys', 'CountrysController');
 Route::resource('cities', 'CitiesController');
@@ -53,7 +49,7 @@ Route::get('/airportsbycity/{id}', [
     'as'        => 'airportsbycity',
 ]);
 
-Route::get('/start', [
+Route::get('/', [
     'uses'      => 'AirportsfrontController@start',
     'as'        => 'start',
 ]);
