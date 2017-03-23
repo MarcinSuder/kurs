@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Lotniska Świata-opisy,opinie,ciekawostki">
+    <meta name="keywords" content="lotniska,lotnisko,lotniska opinie,airports,airports24,airport,opinie,">
     <title>World Airports</title>
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
