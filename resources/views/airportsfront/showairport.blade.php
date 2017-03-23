@@ -4,7 +4,7 @@
 
     <div class="leftColumn">
             <div class="back">
-                <a style="color: rgb(111, 111, 111)" href="/airportsfront"><- sortowanie</a>
+                <a style="color: rgb(111, 111, 111)" href="/airportsfront">sortowanie</a>
             </div>
     </div>
 
