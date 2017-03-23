@@ -49,11 +49,6 @@ Route::get('/airportsbycity/{id}', [
     'as'        => 'airportsbycity',
 ]);
 
-Route::get('/airports/create', [
-    'uses'      => 'AirportsController@create',
-    'as'        => 'create',
-]);
-
 Route::get('/', [
     'uses'      => 'AirportsfrontController@start',
     'as'        => 'start',

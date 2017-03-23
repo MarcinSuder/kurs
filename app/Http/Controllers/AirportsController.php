@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Continent;
 use App\Countrys;
 use Auth;
 use App\Cities;

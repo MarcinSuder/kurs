@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Countrys;
 use Illuminate\Http\Request;
 use App\Cities;
-use App\Http\Controllers\Continent;
+use App\Continent;
 
 class CitiesController extends Controller
 {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Continent;
 use Illuminate\Http\Request;
 use App\Countrys;
 
