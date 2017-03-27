@@ -7,6 +7,7 @@
 
         <div class="headerColumn" >
             <div><h2><i>Panel admin.<br> </div>
+            <div class="adminmenu"><a href="{{route('comments.index')}}" style="background-color: #4a4a4a; color:white;" class="btn btn-default">Komentarze</a></div>
             <div class="adminmenu"><a href="{{route('countrys.index')}}" class="btn btn-danger">Kraj</a></div>
             <div class="adminmenu"><a href="{{route('cities.index')}}" class="btn btn-primary">Miasto</a></div>
             <div class="adminmenu"><a href="{{route('airports.index')}}" class="btn btn-success">Lotnisko</a></div>

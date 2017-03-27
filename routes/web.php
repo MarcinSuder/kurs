@@ -15,6 +15,7 @@
 Route::resource('countrys', 'CountrysController');
 Route::resource('cities', 'CitiesController');
 Route::resource('airports', 'AirportsController');
+Route::resource('comments', 'CommentsController');
 Route::get('airportsfront', 'AirportsfrontController@index');
 Route::get('citiesfront', 'AirportsfrontController@cities');
 Route::get('countrysfront', 'AirportsfrontController@country');
