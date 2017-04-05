@@ -55,6 +55,16 @@ Route::get('/', [
     'as'        => 'start',
 ]);
 
+Route::get('/artykuly', [
+    'uses'      => 'AirportsfrontController@articles',
+    'as'        => 'articles',
+]);
+
+Route::get('/artykuly/{id}', [
+    'uses'      => 'AirportsfrontController@article',
+    'as'        => 'article',
+]);
+
 
 
 

@@ -8,11 +8,36 @@
 
         <div class="foreach">
         @foreach($continents as $continent)
-
-            <a class="ahref" href="/airportsbycontinent/{{$continent->id}}">{{$continent->kontynent}}</a><br>
+                <img src="/css/images/jet2.png" width="18" height="19">
+            <a class="selectahref" href="/airportsbycontinent/{{$continent->id}}">{{$continent->kontynent}}</a><br>
 
         @endforeach
         </div>
+
+            <div class="articles-logo">Artykuły</div>
+
+        {{--@foreach($articles as $article)--}}
+            {{--<div style="margin-bottom: 10%;background-color: #eeeeee">--}}
+            {{--<div style="color: darkred;font-weight: bold">{{$article->title}}</div>--}}
+            {{--<div>{{str_limit($article->article,150)}}</div>--}}
+            {{--</div>--}}
+
+            {{--@endforeach--}}
+
+            @for($i = 0; $i<count($articles); $i++)
+            <div style="margin-bottom: 10%;background-color: #eeeeee">
+
+            <div style="color: darkred;font-weight: bold">{{$articles[$i]['title']}}</div>
+            <div>{{str_limit($articles[$i]['article'],150)}}</div>
+                <div style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
+            </div>
+                @endfor
+        <div style="text-align: right; "><a href="/artykuly">...więcej artykułów</a> </div>
+
+
+
+
+
     </div>
 
 
@@ -24,16 +49,22 @@
              Index a-z (Świat)
          </div>
 
-                     @foreach($airports as $airport)
-                     <div style="border-bottom: 1px solid #b8b8b8">
 
-                         <a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a>
+        <table class="table table-striped">
+        @foreach($airports as $airport)
 
 
-                         <a class="ahref" href="/showairport/{{ $airport['id'] }}">{{ $airport->airports }} ({{$airport->kraj->countrys}})</a>
-                         </div>
+                    <tr>
+                        <td><a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a></td>
 
-                     @endforeach<br>
+
+                        <td style="padding-left: 18%"><a class="ahref" href="/showairport/{{ $airport['id'] }}">{{ $airport->airports }} ({{$airport->kraj->countrys}})</a></td>
+
+                    </tr>
+
+
+        @endforeach
+                    </table>
 
         {{ $airports->links() }}
 

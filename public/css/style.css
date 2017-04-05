@@ -15,7 +15,7 @@
     font-size: 17px;
 }
 .table tbody tr:hover td, .table tbody tr:hover tr {
-    background-color: rgba(30, 13, 41, 0.43);
+    background-color: #e3e3e3;
 }
 .adminmenu {
     float: left;
@@ -43,7 +43,6 @@
     float: left;
     margin-top: 80px;
     font-family: 'Dosis', sans-serif;
-    position: fixed;
 }
 .rightColumn {
 
@@ -55,7 +54,20 @@
     font-family: 'Dosis', sans-serif;
     padding-left: 40px;
     background-color: #eeeeee;
-    padding-bottom: 50%;
+}
+.articles {
+    background-color: #b3c8ef;
+}
+.articles-logo {
+    color:rgb(111, 111, 111) ;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 17px;
+    background-color: white;
+    text-align: center;
+    margin-top: 40%;
+    margin-bottom: 10%;
+
 }
 #title {
     font-size: 20px;
@@ -73,7 +85,6 @@
     letter-spacing: 1px;
     font-size: 17px;
     text-align: center;
-    position: fixed;
     background-color: white;
     margin-left: 2%;
 }
@@ -104,7 +115,14 @@
     color: #5d5d5d;
     font-size: 17px;
     letter-spacing: 1px;
+
+}
+.selectahref {
+    color: #5d5d5d;
+    font-size: 17px;
+    letter-spacing: 1px;
     padding-left: 15%;
+
 }
 .comments {
     margin-top:70px;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Comments;
 use App\Continent;
 use App\Http\Requests\CommentsRequest;
@@ -22,11 +23,11 @@ class AirportsfrontController extends Controller
 
     public function index()
     {
-
+        $articles = Article::all();
         $continents = Continent::all();
-        $airports = Airports::orderBy('airports')->paginate(70);
+        $airports = Airports::orderBy('airports')->paginate(55);
 
-        return view('airportsfront.index', compact('airports','continents'));
+        return view('airportsfront.index', compact('airports','continents','articles'));
     }
 
 
@@ -91,6 +92,18 @@ class AirportsfrontController extends Controller
 
         return view('airportsfront.showairport',compact('airports','city','country','continent','comments'));
 
+    }
+
+    public function articles()
+    {
+        $articles = Article::orderBy('date')->paginate(20);
+        return view('airportsfront.articles',compact('articles'));
+    }
+
+    public function article($id)
+    {
+        $article = Article::find($id);
+        return view('airportsfront.article',compact('article'));
     }
 
 

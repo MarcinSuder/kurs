@@ -15,8 +15,8 @@
 
         <div class="foreach">
         @foreach($countries as $country)
-
-            <a class="ahref" href="/airportsbycountry/{{$country->id}}">{{$country->countrys}}</a><br>
+                <img src="/css/images/jet2.png" width="18" height="19">
+            <a class="selectahref" href="/airportsbycountry/{{$country->id}}">{{$country->countrys}}</a><br>
 
         @endforeach
         </div>
@@ -40,13 +40,15 @@
 
             @if(count($airports))
 
+            <table class="table table-striped">
                 @foreach($airports as $airport)
-                    <div style="border-bottom: 1px solid #b8b8b8">
-                    <a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a>
+                <tr>
+                    <td><a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a></td>
 
-                    <a class="ahref" href="/showairport/{{ $airport['id'] }}">{{$airport->airports}}</a><br>
-                    </div>
+                    <td style="padding-left: 18%"><a class="ahref" href="/showairport/{{ $airport['id'] }}">{{$airport->airports}}</a></td>
+                </tr>
                 @endforeach
+            </table>
 
             @else
                 <div style="padding-top: 10%; text-align: center;">Przepraszamy, chwilowo brak dostępnych opisów.</div>

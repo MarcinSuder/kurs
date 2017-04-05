@@ -16,28 +16,29 @@
     </div>
 
 
-    <div class="rightColumn"><br>
+    <div class="rightColumn">
 
 
         <div class="index">Index a-z ({{$city[0]->cities}})</div>
 
 
-        <div style="padding-left: 30px;padding-top: 50px;" class="airportslist">
+
+
+            <table class="table table-striped">
             @foreach($airports as $airport)
-                <div style="border-bottom: 1px solid #b8b8b8">
+                <tr>
+                    <td><a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a></td>
 
-
-                        <a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a>
-
-                    <a class="ahref" href="/showairport/{{ $airport['id'] }}">{{$airport->airports}}</a>
-                </div>
+                    <td style="padding-left: 18%"><a class="ahref" href="/showairport/{{ $airport['id'] }}">{{$airport->airports}}</a></td>
+                </tr>
             @endforeach
+            </table>
 
 
         {{ $airports->links() }}
 
 
-        </div>
+
     </div>
 
 
