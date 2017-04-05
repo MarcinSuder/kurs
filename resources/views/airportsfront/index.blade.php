@@ -24,7 +24,7 @@
 
             {{--@endforeach--}}
 
-            @for($i = 0; $i<count($articles); $i++)
+            @for($i = 0; $i<5; $i++)
             <div style="margin-bottom: 10%;background-color: #eeeeee">
 
             <div style="color: darkred;font-weight: bold">{{$articles[$i]['title']}}</div>
@@ -71,9 +71,6 @@
 
 
     </div>
-
-
-
 
 
 
@@ -128,7 +125,5 @@
     </div>
 
     </div>
-
-
 
 @endsection
