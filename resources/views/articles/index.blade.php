@@ -14,30 +14,32 @@
         <div class="adminmenu"><a href="{{route('airports.index')}}" class="btn btn-success">Lotnisko</a></div>
         <div class="adminmenu"><a href="/logout" class="btn btn-warning">Wyloguj się</a></div>
         <div class="adminmenu"><a href="/airportsfront" class="btn btn-info">HomeWeb</a></div><br><br>
-
+        <a class="btn btn-danger" href="{{route('cities.create')}}">Dodaj Miasto</a>
     </div>
 
     <div class="admintable">
         <table class="table table-hover" class="admintable">
             <tr>
                 <th>ID</th>
-                <th>Nick</th>
-                <th>Komentarz</th>
+                <th>Tytuł</th>
+                <th>Treść</th>
+                <th>Źródło</th>
                 <th>Usuń</th>
                 <th>Edytuj</th>
             </tr>
-            @foreach($comments as $comment)
+            @foreach($articles as $article)
                 <tr>
-                    <td>{{ $comment->id }}</td>
-                    <td>{{ $comment->nick  }}</td>
-                    <td>{{ $comment->comments  }}</td>
+                    <td>{{ $article->id }}</td>
+                    <td>{{ $article->title }}</td>
+                    <td>{{ str_limit($article->article,500) }}</td>
+                    <td>{{ $article->source }}</td>
 
                     <td>
-                        <a class="btn btn-info" href="{{ route('comments.edit', $comment->id) }}">Edit</a>
+                        <a class="btn btn-info" href="{{ route('articles.edit', $article->id) }}">Edit</a>
                     </td>
 
                     <td>
-                        <form method="post" action="{{ route('comments.destroy', $comment->id) }}">
+                        <form method="post" action="{{ route('articles.destroy', $article->id) }}">
                             <input name="_method" type="hidden" value="DELETE">
                             {{ csrf_field() }}
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -46,7 +48,7 @@
             @endforeach
         </table>
     </div>
-    {{ $comments->links() }}
+    {{ $articles->links() }}
 
 
 
