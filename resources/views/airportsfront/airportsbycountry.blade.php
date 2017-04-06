@@ -14,8 +14,8 @@
         </div>
         <div class="foreach">
         @foreach($cities as $city)
-                <img src="/css/images/jet2.png" width="18" height="19">
-            <a class="selectahref" href="/airportsbycity/{{$city->id}}">{{$city->cities}}</a><br>
+
+            <div style="margin-left: 5%"><a class="selectahref" href="/airportsbycity/{{$city->id}}">{{$city->cities}}</a></div>
 
         @endforeach
             </div>

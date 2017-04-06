@@ -15,8 +15,8 @@
 
         <div class="foreach">
         @foreach($countries as $country)
-                <img src="/css/images/jet2.png" width="18" height="19">
-            <a class="selectahref" href="/airportsbycountry/{{$country->id}}">{{$country->countrys}}</a><br>
+
+            <div style="margin-left: 5%"><a class="selectahref" href="/airportsbycountry/{{$country->id}}">{{$country->countrys}}</a></div>
 
         @endforeach
         </div>

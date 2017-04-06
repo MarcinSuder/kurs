@@ -8,13 +8,14 @@
 
         <div class="foreach">
         @foreach($continents as $continent)
-                <img src="/css/images/jet2.png" width="18" height="19">
-            <a class="selectahref" href="/airportsbycontinent/{{$continent->id}}">{{$continent->kontynent}}</a><br>
+
+
+                <div style="margin-left: 5%"><a class="selectahref" href="/airportsbycontinent/{{$continent->id}}">{{$continent->kontynent}}</a></div>
 
         @endforeach
         </div>
 
-            <div class="articles-logo">Artykuły</div>
+            <div class="articles-logo"><a href="/artykuly">Artykuły ({{count($articles)}})</a></div>
 
         {{--@foreach($articles as $article)--}}
             {{--<div style="margin-bottom: 10%;background-color: #eeeeee">--}}
@@ -25,14 +26,14 @@
             {{--@endforeach--}}
 
             @for($i = 0; $i<5; $i++)
-            <div style="margin-bottom: 10%;background-color: #eeeeee">
+            <div style="margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
 
             <div style="color: darkred;font-weight: bold">{{$articles[$i]['title']}}</div>
             <div>{{str_limit($articles[$i]['article'],150)}}</div>
-                <div style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
+                <div class="more" style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
             </div>
                 @endfor
-        <div style="text-align: right; "><a href="/artykuly">...więcej artykułów</a> </div>
+        <div class="more" style="text-align: right; margin-right: 5% "><a href="/artykuly">...więcej artykułów</a> </div>
 
 
 
