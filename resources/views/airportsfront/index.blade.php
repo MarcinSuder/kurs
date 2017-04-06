@@ -10,12 +10,12 @@
         @foreach($continents as $continent)
 
 
-                <div style="margin-left: 5%"><a class="selectahref" href="/airportsbycontinent/{{$continent->id}}">{{$continent->kontynent}}</a></div>
+                <div class="select"><a href="/airportsbycontinent/{{$continent->id}}">{{$continent->kontynent}}</a></div>
 
         @endforeach
         </div>
 
-            <div class="articles-logo"><a href="/artykuly">Artykuły ({{count($articles)}})</a></div>
+            <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
 
         {{--@foreach($articles as $article)--}}
             {{--<div style="margin-bottom: 10%;background-color: #eeeeee">--}}
@@ -26,7 +26,7 @@
             {{--@endforeach--}}
 
             @for($i = 0; $i<5; $i++)
-            <div style="margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
+            <div style="border-radius: 3px;margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
 
             <div style="color: darkred;font-weight: bold">{{$articles[$i]['title']}}</div>
             <div>{{str_limit($articles[$i]['article'],150)}}</div>

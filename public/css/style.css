@@ -17,14 +17,6 @@
 .table tbody tr:hover td, .table tbody tr:hover tr {
     background-color: #e3e3e3;
 }
-.foreach a {
-    text-decoration: none;
-    color: #666666;
-}
-.foreach a:hover {
-    color: #666666;
-    font-weight: bold;
-}
 .adminmenu {
     float: left;
 }
@@ -86,8 +78,26 @@
     font-size: 20px;
     text-align: center;
 }
-.foreach {
-    margin-top: 25%;
+.select {
+    background-color: #eeeeee;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 3px;
+    font-family: 'Dosis', sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
+.select:hover {
+    background-color: #cacaca;;
+}
+.select a {
+    color: #646464;
+}
+.select a:hover {
+    text-decoration: none;
 }
 .menufront {
     float: right;
@@ -99,7 +109,21 @@
     font-size: 17px;
     text-align: center;
     background-color: white;
-    margin-left: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    margin-top: 20%;
+    border: 1px solid #b4b4b4;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.back a {
+    color:rgb(111, 111, 111);
+    text-decoration: none;
+}
+.back:hover {
+    background-color: #eeeeee;
+    text-decoration: none;
 }
 .list {
     font-size:15px;
@@ -139,7 +163,6 @@
 }
 .table a:hover {
     color: #666666;
-    font-weight: bold;
 }
 .comments {
     margin-top:70px;
@@ -169,6 +192,11 @@
     float: right;
     border-radius: 3px;
     font-family: 'Dosis', sans-serif;
+}
+.button:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(92, 92, 92);
 }
 .button-airport {
     border: 1px solid #a3a3a3;
@@ -201,11 +229,6 @@
 }
 .website:hover {
     background-color: #cacaca;
-}
-.button:hover{
-    text-decoration: none;
-    color: white;
-    background-color: rgb(92, 92, 92);
 }
 .more a:hover {
     font-weight: bold;

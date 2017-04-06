@@ -15,7 +15,7 @@
         <div class="foreach">
         @foreach($cities as $city)
 
-            <div style="margin-left: 5%"><a class="selectahref" href="/airportsbycity/{{$city->id}}">{{$city->cities}}</a></div>
+            <div class="select"><a href="/airportsbycity/{{$city->id}}">{{$city->cities}}</a></div>
 
         @endforeach
             </div>

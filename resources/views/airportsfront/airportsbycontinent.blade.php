@@ -10,13 +10,13 @@
 
 
         <div class="back">
-            <a style="color: rgb(111, 111, 111)" href="/airportsfront">sortowanie</a>
+            <a href="/airportsfront">sortowanie</a>
         </div>
 
         <div class="foreach">
         @foreach($countries as $country)
 
-            <div style="margin-left: 5%"><a class="selectahref" href="/airportsbycountry/{{$country->id}}">{{$country->countrys}}</a></div>
+            <div class="select"><a class="selectahref" href="/airportsbycountry/{{$country->id}}">{{$country->countrys}}</a></div>
 
         @endforeach
         </div>
