@@ -14,7 +14,7 @@
         <div class="adminmenu"><a href="{{route('airports.index')}}" class="btn btn-success">Lotnisko</a></div>
         <div class="adminmenu"><a href="/logout" class="btn btn-warning">Wyloguj się</a></div>
         <div class="adminmenu"><a href="/airportsfront" class="btn btn-info">HomeWeb</a></div><br><br>
-        <a class="btn btn-danger" href="{{route('cities.create')}}">Dodaj Miasto</a>
+        <a class="btn btn-danger" href="{{route('articles.create')}}">Dodaj Artykuł</a>
     </div>
 
     <div class="admintable">

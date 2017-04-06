@@ -27,8 +27,21 @@ class ArticlesController extends Controller
         $article->source = $request->input('source');
         $article->save();
         return redirect('/articles');
+    }
 
+    public function create()
+    {
+        return view('articles.create');
+    }
 
+    public function store(Request $request)
+    {
+        $article = new Article();
+        $article->title = $request->input('title');
+        $article->article = $request->input('article');
+        $article->source = $request->input('source');
+        $article->save();
+        return redirect('/articles');
     }
 
     public function destroy($id)
@@ -38,3 +51,4 @@ class ArticlesController extends Controller
         return redirect('/articles');
     }
 }
+;

@@ -96,7 +96,7 @@ class AirportsfrontController extends Controller
 
     public function articles()
     {
-        $articles = Article::orderBy('date')->paginate(20);
+        $articles = Article::orderBy('updated_at')->paginate(20);
         return view('airportsfront.articles',compact('articles'));
     }
 
