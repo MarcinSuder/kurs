@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $articles = Article::paginate(10);

@@ -4,6 +4,8 @@
 
     <div class="leftColumn-index">
 
+
+
         <div class="back">sortowanie</div>
 
         <div class="foreach">
@@ -14,6 +16,7 @@
 
         @endforeach
         </div>
+        
 
             <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
 
@@ -86,8 +89,10 @@
 
     <div id="menu-mobile">
 
+
+        <a class="button" href="/airportsfront">Główna</a>
         <a class="button" href="/contact">Kontakt</a>
-        <a class="button" href="/airportsfront">Główna/Home</a>
+        <a class="button" href="/artykuly">Artykuły</a>
 
     </div>
 
