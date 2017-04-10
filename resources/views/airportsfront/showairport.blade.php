@@ -104,8 +104,9 @@
 
                 <div id="menu-mobile">
 
+                    <a class="button" href="/airportsfront">Główna</a>
                     <a class="button" href="/contact">Kontakt</a>
-                    <a class="button" href="/airportsfront">Główna/Home</a>
+                    <a class="button" href="/artykuly">Artykuły</a>
 
                 </div>
 
