@@ -10,7 +10,7 @@
 
 
         <div class="back">
-            <a style="color: #a3a3a3" href="/airportsfront">sortowanie</a>
+            <a style="color: #3a3a3a" href="/airportsfront">sortowanie</a>
         </div>
         <div class="foreach">
         @foreach($cities as $city)
