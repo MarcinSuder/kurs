@@ -30,36 +30,35 @@
 
     <div  class="headerColumn">
 
-      <div style="float:left;font-family:'Courier New'; padding-left:25px; font-weight:600; font-size:32px; " id="worldairports">
-          <a style="color:grey;text-decoration: none" href="http://airports24.eu/"> <span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color: white">airports</span><span style="text-shadow: 0px 1px 5px red;color: white">24</span><span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color:white">.eu</span></a>
+      <div style="font-style: italic;margin-left: 1%;float: left;font-weight:600; font-size:28px;" id="worldairports">
+          <a style="color:#2a2a2a;text-decoration: none" href="http://airports24.eu/"> <span style="color: rgb(111, 111, 111)">airports</span><span style="color: rgba(255, 69, 0, 0.8)">24</span><span style="color:rgb(111, 111, 111)">.eu</span></a>
       </div>
 
 
-        <div class="flightradar" style="float:left;padding-left: 100px;">
-            <a target="_blank" href="https://www.flightradar24.com/"><img width="180" height="40" src="/css/images/flightradar24.jpg"></a>
-        </div>
+
 
 
         @if (Auth::user())
 
-            <a class="button" href="/logout" >Wyloguj się</a>
+            <a class="button" href="/logout" >WYLOGUJ SIĘ</a>
 
         @else
 
-            <a class="button" href="/login" >Admin</a>
+            <a class="button" href="/login" >ADMIN</a>
 
         @endif
 
         @if(Auth::user())
 
-            <a class="button" href="/airports" >Admin</a>
+            <a class="button" href="/airports" >ADMIN</a>
 
         @endif
 
 
-        <a class="button" href="/offer">Współpraca</a>
-        <a class="button" href="/contact">Kontakt</a>
-        <a class="button" href="/airportsfront">Główna/Home</a>
+        <a class="button" href="/offer">WSPÓŁPRACA</a>
+        <a class="button" href="/contact">KONTAKT</a>
+        <a class="button" href="/airportsfront">GŁÓWNA/HOME</a>
+
 
 
     </div>

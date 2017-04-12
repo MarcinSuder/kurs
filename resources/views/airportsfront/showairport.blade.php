@@ -4,7 +4,7 @@
 
     <div class="leftColumn">
             <div class="back">
-                <a style="color: rgb(111, 111, 111)" href="/airportsfront">sortowanie</a>
+                <a style="color: #3a3a3a" href="/airportsfront">sortowanie</a>
             </div>
     </div>
 
@@ -15,10 +15,10 @@
         <div class="index"> {{$airports[0]->airports}}</div>
 
 
-            <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsfront">Świat</a></div>
-            <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsbycontinent/{{$continent[0]->id}}">{{$continent[0]->kontynent}}</a></div>
-            <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsbycountry/{{$country[0]->id}}">{{$country[0]->countrys}}</a></div>
-            <div class="button-airport"><a style="color: #2b2b2b; text-decoration: none" href="/airportsbycity/{{$city[0]->id}}">{{$city[0]->cities}}</a></div>
+            <div class="button-airport"><a style=" text-decoration: none" href="/airportsfront">Świat</a></div>
+            <div class="button-airport"><a style="text-decoration: none" href="/airportsbycontinent/{{$continent[0]->id}}">{{$continent[0]->kontynent}}</a></div>
+            <div class="button-airport"><a style=" text-decoration: none" href="/airportsbycountry/{{$country[0]->id}}">{{$country[0]->countrys}}</a></div>
+            <div class="button-airport"><a style="text-decoration: none" href="/airportsbycity/{{$city[0]->id}}">{{$city[0]->cities}}</a></div>
 
 
 
@@ -27,7 +27,7 @@
 
         @if( !empty($airports[0]['website']))
         <div class="website">
-            <a style="color: #2b2b2b; text-decoration: none" href="{{$airports[0]->website}}" target="_blank">Oficjalna / Website</a>
+            <a style="color: #3a3a3a; text-decoration: none" href="{{$airports[0]->website}}" target="_blank">Oficjalna / Website</a>
         </div>
         @else
             @endif
