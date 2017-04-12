@@ -5,7 +5,7 @@
 
     <div class="leftColumn">
         <div class="back">
-            <a style="color: rgb(111, 111, 111)" href="/airportsfront">sortowanie</a>
+            <a style="color: #3a3a3ag" href="/airportsfront">sortowanie</a>
         </div>
     </div>
 
