@@ -31,7 +31,7 @@
     <div  class="headerColumn">
 
       <div style="font-style: italic;margin-left: 1%;float: left;font-weight:600; font-size:28px;" id="worldairports">
-          <a style="color:#2a2a2a;text-decoration: none" href="http://airports24.eu/"> <span style="color: rgb(111, 111, 111)">airports</span><span style="color: rgba(255, 69, 0, 0.8)">24</span><span style="color:rgb(111, 111, 111)">.eu</span></a>
+          <a style="color:grey;text-decoration: none" href="http://airports24.eu/"> <span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color: white">airports</span><span style="text-shadow: 0px 1px 5px red;color: white">24</span><span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color:white">.eu</span></a>
       </div>
 
 

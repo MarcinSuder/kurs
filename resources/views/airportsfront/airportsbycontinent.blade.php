@@ -72,17 +72,21 @@
 
     <div class="section-mobile">
 
+        <div class="header-mobile">
+
             <div id="worldairports-mobile">
                 <a style="color:grey;text-decoration: none" href="http://airports24.eu/"> <span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color: white">airports</span><span style="text-shadow: 0px 1px 5px red;color: white">24</span><span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color:white">.eu</span></a>
             </div>
 
             <div id="menu-mobile">
 
+
                 <a class="button" href="/airportsfront">Główna</a>
                 <a class="button" href="/contact">Kontakt</a>
                 <a class="button" href="/artykuly">Artykuły</a>
 
             </div>
+        </div>
 
 
         <div class="select-mobile">
@@ -97,7 +101,7 @@
 
         <div class="index-mobile">
             <div class="index">
-                Index Lotnisk a-z ({{$continent[0]->kontynent}})
+                Index a-z ({{$continent[0]->kontynent}})
             </div>
 
 

@@ -3,20 +3,21 @@
 @section('content')
 
 
-        <div style="float:left;font-family:'Courier New'; font-weight:600;" id="worldairports-mobile">
+    <div class="header-mobile">
+
+        <div id="worldairports-mobile">
             <a style="color:grey;text-decoration: none" href="http://airports24.eu/"> <span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color: white">airports</span><span style="text-shadow: 0px 1px 5px red;color: white">24</span><span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color:white">.eu</span></a>
         </div>
 
-        <br>
-
-
         <div id="menu-mobile">
+
 
             <a class="button" href="/airportsfront">Główna</a>
             <a class="button" href="/contact">Kontakt</a>
             <a class="button" href="/artykuly">Artykuły</a>
 
-        </div><br><br>
+        </div>
+    </div>
 
 
         {{--<form action="mailto:marcin120478@gmail.com" method="post" enctype="text/plain">--}}
