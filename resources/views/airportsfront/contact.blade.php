@@ -12,9 +12,9 @@
         <div id="menu-mobile">
 
 
-            <a class="button" href="/airportsfront">Główna</a>
-            <a class="button" href="/contact">Kontakt</a>
-            <a class="button" href="/artykuly">Artykuły</a>
+            <a class="btn btn-danger" href="/airportsfront">Główna</a>
+            <a class="btn btn-success" href="/contact">Kontakt</a>
+            <a class="btn btn-primary" href="/artykuly">Artykuły</a>
 
         </div>
     </div>

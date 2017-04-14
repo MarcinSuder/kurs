@@ -41,33 +41,35 @@ class AirportsfrontController extends Controller
 
     public function airportsbycontinent($id)
     {
+        $articles = Article::all();
         $continent = Continent::where('id',$id)->get();
         $countries = Countrys::where('id_continents',$id)->orderBy('countrys')->get();
         $airports = Airports::where('id_continents',$id)->orderBy('airports')->paginate(50);
 
 
-        return view('airportsfront.airportsbycontinent',compact('countries','airports','continent'));
+        return view('airportsfront.airportsbycontinent',compact('countries','airports','continent','articles'));
 
     }
 
 
     public function airportsbycountry($id)
     {
-
+        $articles = Article::all();
         $country = Countrys::where('id',$id)->get();
         $cities = Cities::where('id_countrys',$id)->orderBy('cities')->get();
         $airports = Airports::where('id_countrys',$id)->orderBy('airports')->paginate(30);
 
-        return view('airportsfront.airportsbycountry',compact('cities','airports','country'));
+        return view('airportsfront.airportsbycountry',compact('cities','airports','country','articles'));
     }
 
 
     public function airportsbycity($id)
     {
+        $articles = Article::all();
         $city = Cities::where('id',$id)->get();
         $airports = Airports::where('id_cities',$id)->orderBy('airports')->paginate(12);
 
-        return view('airportsfront.airportsbycity',compact('airports','city'));
+        return view('airportsfront.airportsbycity',compact('airports','city','articles'));
 
     }
 
@@ -75,7 +77,7 @@ class AirportsfrontController extends Controller
 
     public function airport($id){
 
-
+        $articles = Article::all();
         $comments = Comments::where('id_airports', $id)->get();
         $airports = Airports::where('id', $id)->get();
 
@@ -90,7 +92,7 @@ class AirportsfrontController extends Controller
 
 
 
-        return view('airportsfront.showairport',compact('airports','city','country','continent','comments'));
+        return view('airportsfront.showairport',compact('airports','city','country','continent','comments','articles'));
 
     }
 
@@ -102,8 +104,9 @@ class AirportsfrontController extends Controller
 
     public function article($id)
     {
+        $articles = Article::all();
         $article = Article::find($id);
-        return view('airportsfront.article',compact('article'));
+        return view('airportsfront.article',compact('article','articles'));
     }
 
 

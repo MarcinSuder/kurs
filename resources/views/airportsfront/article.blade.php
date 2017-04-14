@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <div class="leftColumn">
+    <div class="leftColumn-index">
         <div class="back">
             <a style="color: #3a3a3ag" href="/airportsfront">sortowanie</a>
         </div>
@@ -13,19 +13,31 @@
 
 
 
+    <div class="mainColumn">
+
+                <div style=";text-align: center; color: darkred;margin-top: 160px">{{$article->title}}</div>
+                <div style="font-size:12px;margin-bottom: 3%;text-align: center">Dodano: {{$article->updated_at}}</div>
+                <div style="margin-left: 1%;margin-right: 1%;margin-bottom: 10%">{{$article->article}}</div>
+                <div style="margin-left: 1%;margin-right: 1%;margin-top: 1%;margin-bottom:2%">Źródło: {{$article->source}}</div>
+
+    </div>
+
+
+
     <div class="rightColumn">
 
+        <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
 
 
+        @for($i = 0; $i<5; $i++)
+            <div style="border-radius: 3px;margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
 
-
-
-                <div style="font-weight:900;text-align: center; color: darkred;margin-top: 3%">{{$article->title}}</div>
-                <div style="font-size:12px;margin-bottom: 3%;text-align: center">Dodano: {{$article->updated_at}}</div>
-                <div style="margin-bottom: 10%">{{$article->article}}</div>
-                <div style="margin-top: 1%;margin-bottom:2%">Źródło: {{$article->source}}</div>
-
-
+                <div style="color: darkred;">{{$articles[$i]['title']}}</div>
+                <div>{{str_limit($articles[$i]['article'],150)}}</div>
+                <div class="more" style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
+            </div>
+        @endfor
+        <div class="more" style="text-align: right; margin-right: 5% "><a href="/artykuly">...więcej artykułów</a> </div>
 
     </div>
 
@@ -44,9 +56,9 @@
             <div id="menu-mobile">
 
 
-                <a class="button" href="/airportsfront">Główna</a>
-                <a class="button" href="/contact">Kontakt</a>
-                <a class="button" href="/artykuly">Artykuły</a>
+                <a class="btn btn-danger" href="/airportsfront">Główna</a>
+                <a class="btn btn-success" href="/contact">Kontakt</a>
+                <a class="btn btn-primary" href="/artykuly">Artykuły</a>
 
             </div>
         </div>

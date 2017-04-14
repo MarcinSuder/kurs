@@ -5,7 +5,6 @@
     <div class="leftColumn-index">
 
 
-
         <div class="back">sortowanie</div>
 
         <div class="foreach">
@@ -16,45 +15,14 @@
 
         @endforeach
         </div>
-        
-
-            <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
-
-        {{--@foreach($articles as $article)--}}
-            {{--<div style="margin-bottom: 10%;background-color: #eeeeee">--}}
-            {{--<div style="color: darkred;font-weight: bold">{{$article->title}}</div>--}}
-            {{--<div>{{str_limit($article->article,150)}}</div>--}}
-            {{--</div>--}}
-
-            {{--@endforeach--}}
-
-            @for($i = 0; $i<5; $i++)
-            <div style="border-radius: 3px;margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
-
-            <div style="color: darkred;font-weight: bold">{{$articles[$i]['title']}}</div>
-            <div>{{str_limit($articles[$i]['article'],150)}}</div>
-                <div class="more" style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
-            </div>
-                @endfor
-        <div class="more" style="text-align: right; margin-right: 5% "><a href="/artykuly">...więcej artykułów</a> </div>
-
-
-
-
 
     </div>
 
 
 
-    <div class="rightColumn">
 
 
-
-
-
-
-
-
+    <div class="mainColumn">
 
          <div class="header">
              Index a-z (Świat)
@@ -64,20 +32,34 @@
         <table class="table table-striped">
         @foreach($airports as $airport)
 
-
                     <tr>
-
                         <td style="text-align: center"><a class="ahref" href="/showairport/{{ $airport['id'] }}">{{ $airport->airports }} ({{$airport->kraj->countrys}})</a></td>
-
                     </tr>
-
 
         @endforeach
                     </table>
 
         {{ $airports->links() }}
 
+    </div>
 
+
+
+
+    <div class="rightColumn">
+
+        <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
+
+
+        @for($i = 0; $i<5; $i++)
+            <div style="border-radius: 3px;margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
+
+                <div style="color: darkred;">{{$articles[$i]['title']}}</div>
+                <div>{{str_limit($articles[$i]['article'],150)}}</div>
+                <div class="more" style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
+            </div>
+        @endfor
+        <div class="more" style="text-align: right; margin-right: 5% "><a href="/artykuly">...więcej artykułów</a> </div>
 
     </div>
 
@@ -97,9 +79,9 @@
         <div id="menu-mobile">
 
 
-            <a class="button" href="/airportsfront">Główna</a>
-            <a class="button" href="/contact">Kontakt</a>
-            <a class="button" href="/artykuly">Artykuły</a>
+            <a class="btn btn-danger" href="/airportsfront">Główna</a>
+            <a class="btn btn-success" href="/contact">Kontakt</a>
+            <a class="btn btn-primary" href="/artykuly">Artykuły</a>
 
         </div>
      </div>

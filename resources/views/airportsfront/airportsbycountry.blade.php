@@ -6,7 +6,7 @@
 
 
 
-    <div class="leftColumn">
+    <div class="leftColumn-index">
 
 
         <div class="back">
@@ -26,10 +26,10 @@
 
 
 
-    <div class="rightColumn">
+    <div class="mainColumn">
 
 
-        <div class="index">Index a-z ({{$country[0]->countrys}})</div>
+        <div class="header">Index a-z ({{$country[0]->countrys}})</div>
 
 
 
@@ -40,10 +40,7 @@
 
 
                     <tr>
-                        <td><a href="/showairport/{{ $airport['id'] }}"><img src="/css/images/jet2.png" width="30" height="25"></a></td>
-
-
-                        <td style="padding-left: 18%"><a class="ahref"  href="/showairport/{{ $airport['id'] }}">{{$airport->airports}}</a></td>
+                        <td style="text-align: center"><a class="ahref"  href="/showairport/{{ $airport['id'] }}">{{$airport->airports}}</a></td>
                     </tr>
                 @endforeach
                 </table>
@@ -59,6 +56,25 @@
     </div>
 
         {{ $airports->links() }}
+
+
+
+    <div class="rightColumn">
+
+        <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
+
+
+        @for($i = 0; $i<5; $i++)
+            <div style="border-radius: 3px;margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
+
+                <div style="color: darkred;">{{$articles[$i]['title']}}</div>
+                <div>{{str_limit($articles[$i]['article'],150)}}</div>
+                <div class="more" style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
+            </div>
+        @endfor
+        <div class="more" style="text-align: right; margin-right: 5% "><a href="/artykuly">...więcej artykułów</a> </div>
+
+    </div>
 
 
 
@@ -79,9 +95,9 @@
             <div id="menu-mobile">
 
 
-                <a class="button" href="/airportsfront">Główna</a>
-                <a class="button" href="/contact">Kontakt</a>
-                <a class="button" href="/artykuly">Artykuły</a>
+                <a class="btn btn-danger" href="/airportsfront">Główna</a>
+                <a class="btn btn-success" href="/contact">Kontakt</a>
+                <a class="btn btn-primary" href="/artykuly">Artykuły</a>
 
             </div>
         </div>

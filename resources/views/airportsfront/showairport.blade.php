@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="leftColumn">
+    <div class="leftColumn-index">
             <div class="back">
                 <a style="color: #3a3a3a" href="/airportsfront">sortowanie</a>
             </div>
@@ -10,15 +10,15 @@
 
 
 
-    <div class="rightColumn" >
+    <div class="mainColumn" >
 
-        <div class="index"> {{$airports[0]->airports}}</div>
+        <div class="header"> {{$airports[0]->airports}}</div>
 
 
             <div class="button-airport"><a style=" text-decoration: none" href="/airportsfront">Świat</a></div>
             <div class="button-airport"><a style="text-decoration: none" href="/airportsbycontinent/{{$continent[0]->id}}">{{$continent[0]->kontynent}}</a></div>
             <div class="button-airport"><a style=" text-decoration: none" href="/airportsbycountry/{{$country[0]->id}}">{{$country[0]->countrys}}</a></div>
-            <div class="button-airport"><a style="text-decoration: none" href="/airportsbycity/{{$city[0]->id}}">{{$city[0]->cities}}</a></div>
+            <div class="button-airport"><a style="text-decoration: none" href="/airportsbycity/{{$city[0]->id}}">{{$city[0]->cities}}</a></div><br>
 
 
 
@@ -93,6 +93,26 @@
 
 
 
+    <div class="rightColumn">
+
+        <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
+
+
+        @for($i = 0; $i<5; $i++)
+            <div style="border-radius: 3px;margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
+
+                <div style="color: darkred;font-weight: bold">{{$articles[$i]['title']}}</div>
+                <div>{{str_limit($articles[$i]['article'],150)}}</div>
+                <div class="more" style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
+            </div>
+        @endfor
+        <div class="more" style="text-align: right; margin-right: 5% "><a href="/artykuly">...więcej artykułów</a> </div>
+
+    </div>
+
+
+
+
     {{--section responsive--}}
 
     <div class="section-mobile">
@@ -106,9 +126,9 @@
             <div id="menu-mobile">
 
 
-                <a class="button" href="/airportsfront">Główna</a>
-                <a class="button" href="/contact">Kontakt</a>
-                <a class="button" href="/artykuly">Artykuły</a>
+                <a class="btn btn-danger" href="/airportsfront">Główna</a>
+                <a class="btn btn-success" href="/contact">Kontakt</a>
+                <a class="btn btn-primary" href="/artykuly">Artykuły</a>
 
             </div>
         </div>

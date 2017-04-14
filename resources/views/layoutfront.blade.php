@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Lotniska Świata-opisy,opinie,ciekawostki">
     <meta name="keywords" content="lotniska,lotnisko,lotniska opinie,airports,airports24,airport,opinie,">
-    <title>World Airports</title>
+    <title>World Airports-Lotniska Świata</title>
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -30,34 +30,37 @@
 
     <div  class="headerColumn">
 
-      <div style="font-style: italic;margin-left: 1%;float: left;font-weight:600; font-size:28px;" id="worldairports">
-          <a style="color:grey;text-decoration: none" href="http://airports24.eu/"> <span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color: white">airports</span><span style="text-shadow: 0px 1px 5px red;color: white">24</span><span style="text-shadow: 0px 1px 5px rgb(33, 33, 33);color:white">.eu</span></a>
+      <div id="worldairports">
+          <a style="color:white;text-decoration: none" href="http://airports24.eu/"> <span style="color: white">airports</span><span style="color: white">24</span><span style="color:white">.eu</span></a>
+          <a target="_blank" style="padding-top: 14px;color: white;text-decoration: none;float: right;padding-right: 5px;font-size: 15px" href="https://www.flightradar24.com/">| flightradar24.com</a>
       </div>
 
 
 
-
+<div class="center">
 
         @if (Auth::user())
 
-            <a class="button" href="/logout" >WYLOGUJ SIĘ</a>
+            <div class="button"><a  href="/logout" >WYLOGUJ SIĘ</a></div>
 
         @else
 
-            <a class="button" href="/login" >ADMIN</a>
+            <div class="button"><a href="/login" >ADMIN</a></div>
 
         @endif
 
         @if(Auth::user())
 
-            <a class="button" href="/airports" >ADMIN</a>
+                <div class="button"><a href="/airports" >ADMIN</a></div>
 
         @endif
 
 
-        <a class="button" href="/offer">WSPÓŁPRACA</a>
-        <a class="button" href="/contact">KONTAKT</a>
-        <a class="button" href="/airportsfront">GŁÓWNA/HOME</a>
+            <div class="button"><a href="/offer">WSPÓŁPRACA</a></div>
+            <div class="button"><a href="/contact">KONTAKT</a></div>
+            <div class="button"><a href="/airportsfront">GŁÓWNA/HOME</a></div>
+</div>
+
 
 
 
