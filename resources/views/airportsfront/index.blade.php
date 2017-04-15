@@ -25,7 +25,7 @@
     <div class="mainColumn">
 
          <div class="header">
-             Index a-z (Świat)
+             Index a-z (Świat) <span style="font-weight: bold;color: orangered;">({{ count($airports) }}) </span>
          </div>
 
 

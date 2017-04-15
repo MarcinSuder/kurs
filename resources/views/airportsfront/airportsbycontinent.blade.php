@@ -32,7 +32,7 @@
     <div class="mainColumn">
 
 
-        <div class="header">Index a-z ({{$continent[0]->kontynent}})</div>
+        <div class="header">Index a-z ({{$continent[0]->kontynent}}) <span style="font-weight: bold;color: orangered;">({{ count($airports) }}) </span></div>
 
 
 
