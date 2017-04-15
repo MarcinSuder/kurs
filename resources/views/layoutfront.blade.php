@@ -32,34 +32,41 @@
 
       <div id="worldairports">
           <a style="color:white;text-decoration: none" href="http://airports24.eu/"> <span style="color: white">airports</span><span style="color: white">24</span><span style="color:white">.eu</span></a>
-          <a target="_blank" style="padding-top: 14px;color: white;text-decoration: none;float: right;padding-right: 5px;font-size: 15px" href="https://www.flightradar24.com/">| flightradar24.com</a>
+          <div class="flightradar"><a target="_blank" href="http://www.prtl.pl/">| Rynek lotniczy</a> <a target="_blank" href="https://www.flightradar24.com/">| flightradar24.com</a></div>
+
       </div>
 
 
+        <div class="button-last"></div>
 
-<div class="center">
 
         @if (Auth::user())
 
-            <div class="button"><a  href="/logout" >WYLOGUJ SIĘ</a></div>
+            <a href="/logout" ><div class="button">WYLOGUJ SIĘ</div></a>
 
         @else
 
-            <div class="button"><a href="/login" >ADMIN</a></div>
+
+            <a href="/login" ><div class="button">ADMIN</div></a>
 
         @endif
+
 
         @if(Auth::user())
 
-                <div class="button"><a href="/airports" >ADMIN</a></div>
+                <a href="/airports" ><div class="button">ADMIN</div></a>
 
         @endif
+            <a href="/contact"><div class="button">KONTAKT</div></a>
+             <a href="/offer"><div class="button">WSPÓŁPRACA</div></a>
+            <a href="/airportsfront"><div class="button">GŁÓWNA/HOME</div></a>
 
 
-            <div class="button"><a href="/offer">WSPÓŁPRACA</a></div>
-            <div class="button"><a href="/contact">KONTAKT</a></div>
-            <div class="button"><a href="/airportsfront">GŁÓWNA/HOME</a></div>
-</div>
+     </div>
+
+
+
+
 
 
 

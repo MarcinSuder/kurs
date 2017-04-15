@@ -10,7 +10,7 @@
 
         <div class="back">
 
-            <a style="color:#3a3a3a" href="/airportsfront">sortowanie</a>
+            <a href="/airportsfront">sortowanie</a>
         </div>
 
     </div>
@@ -42,13 +42,13 @@
 
     <div class="rightColumn">
 
-        <div class="back"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
+        <div class="back1"><a href="/artykuly">artykuły ({{count($articles)}})</a></div>
 
 
         @for($i = 0; $i<5; $i++)
             <div style="border-radius: 3px;margin-bottom: 10%;background-color: #eeeeee;margin-left: 5%; margin-right: 5%">
 
-                <div style="color: darkred;">{{$articles[$i]['title']}}</div>
+                <div style="text-decoration: underline">{{$articles[$i]['title']}}</div>
                 <div>{{str_limit($articles[$i]['article'],150)}}</div>
                 <div class="more" style="text-align: right"><a href="/artykuly/{{$articles[$i]['id']}}">...więcej</a> </div>
             </div>
