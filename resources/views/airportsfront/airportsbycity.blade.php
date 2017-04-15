@@ -19,7 +19,7 @@
     <div class="mainColumn">
 
 
-        <div class="header">Index a-z ({{$city[0]->cities}}) <span style="font-weight: bold;color: orangered;">({{ count($airports) }}) </span></div>
+        <div class="header">Index a-z ({{$city[0]->cities}}) <span style="font-weight: bold;color: orangered;">({{ count($airports_all) }}) </span></div>
 
 
 
