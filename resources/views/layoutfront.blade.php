@@ -59,7 +59,7 @@
         @endif
             <a href="/contact"><div class="button">KONTAKT</div></a>
              <a href="/offer"><div class="button">WSPÓŁPRACA</div></a>
-            <a href="/airportsfront"><div class="button">GŁÓWNA/HOME</div></a>
+            <a href="/airportsfront"><div class="button">GŁÓWNA / HOME</div></a>
 
 
      </div>

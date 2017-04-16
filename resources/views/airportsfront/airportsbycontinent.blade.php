@@ -51,9 +51,9 @@
 
             @else
                 <div style="padding-top: 10%; text-align: center;">Przepraszamy, chwilowo brak dostępnych opisów.</div>
-                <div style="text-align: center;padding-top: 30px;">
-                    <a style="border-bottom:solid 1px #5c5c5c;color:#4f4f4f;font-weight: 700;font-size: 17px;" href="/airportsfront">Powrót</a>
-                </div>
+            <div style="text-align: center;padding-top: 30px;">
+                <a style="padding-right:15px; padding-left: 15px;border-radius: 3px;border: 1px solid #a3a3a3;color:#6b6b6b;font-weight: 700;font-size: 17px;" href="/airportsfront">powrót</a>
+            </div>
             @endif
 
         {{ $airports->links() }}
